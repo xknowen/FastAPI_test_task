@@ -5,7 +5,7 @@ __all__ = (
     'User'
 )
 
-from base import Base
-from account import Account
-from payment import Payment
-from user import User
+from .base import Base
+from .account import Account
+from .payment import Payment
+from .user import User
