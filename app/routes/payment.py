@@ -1,10 +1,9 @@
-from sanic import Blueprint
-from sanic.response import json
+from sanic import Blueprint, response
 
 
 payment_bp = Blueprint("payment")
 
 
-@payment_bp.get("/accounts")
-async def get_accounts(request):
-    return json({"message": "Payment logic will be implemented here"})
+@payment_bp.post("/create")
+async def create_payment(request):
+    return response.json({"message": "Платеж создан"}, status=201)
